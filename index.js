@@ -6,8 +6,6 @@ let slidePosition = 0;
 const totalSlides = slides.length;
 
 
-
-
 console.log(slides.length)
 
 prevBtn.addEventListener("click",prevSlide)
@@ -21,10 +19,8 @@ function hideSlides(){
     }
 }
 
-
 function prevSlide(){
     hideSlides(); 
-
     if(slidePosition === 0){
         slidePosition = totalSlides - 1
     }
@@ -39,15 +35,15 @@ function nextSlide(){
     hideSlides(); 
  if(slidePosition === totalSlides - 1){
         slidePosition = 0
+        
     }
     else{
         slidePosition ++
     }
-    
-    
+    console.log(slidePosition)
+    console.log(slides[slidePosition])
     slides[slidePosition].classList.add("carousel-item-visible");
-  
-  
+ 
 }
 
 
